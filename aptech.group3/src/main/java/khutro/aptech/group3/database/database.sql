@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS User (
     password VARCHAR(255) NOT NULL,
     name NVARCHAR(255),
     phone INT,
-    created_time datetime
+    created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE IF NOT EXISTS Contact (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS Room (
     status BOOLEAN,
     room_area DECIMAL(10, 2),
     type VARCHAR(255),
-    created_time datetime
+    created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Tạo bảng RoomImages nếu nó chưa tồn tại
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS RoomImages (
     id INT PRIMARY KEY AUTO_INCREMENT,
     image_url VARCHAR(255),
     room_id INT,
-    created_time date,
+    created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (room_id) REFERENCES Room(id)
 );
 

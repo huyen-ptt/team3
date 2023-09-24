@@ -12,47 +12,14 @@
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.control.Hyperlink?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0"
-            prefWidth="912.0" style="-fx-background-color: F7FFE5;" xmlns="http://javafx.com/javafx/20.0.1"
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0"
+            prefWidth="1024" style="-fx-background-color: F7FFE5;" xmlns="http://javafx.com/javafx/20.0.1"
 >
     <content>
         <AnchorPane prefHeight="645.0" prefWidth="919.0">
             <children>
-                <AnchorPane layoutX="-4.0" layoutY="-1.0" prefHeight="70.0" prefWidth="750.0"
-                            style="-fx-background-color: #A0C49D;" xmlns="http://javafx.com/javafx/20.0.1"
-                            xmlns:fx="http://javafx.com/fxml/1">
-                    <children>
-                        <Text cache="true" fill="#0aff75" layoutX="14.0" layoutY="40.0" lineSpacing="1.0"
-                              stroke="#17b945" strokeType="OUTSIDE" strokeWidth="0.0" text="GROUP 3"
-                              textAlignment="CENTER" wrappingWidth="68.0">
-                            <font>
-                                <Font name="System Bold" size="15.0"/>
-                            </font>
-                            <effect>
-                                <InnerShadow>
-                                    <!--               <color>
-                                                      <Color red="0.9210526347160339" green="0.03411306068301201" blue="0.03411306068301201" />
-                                                   </color>-->
-                                </InnerShadow>
-                            </effect>
-                        </Text>
-                        <Hyperlink layoutX="117.0" layoutY="21.0" text="Home" textAlignment="CENTER" textFill="#070000">
-                            <font>
-                                <Font name="System Bold" size="13.0"/>
-                            </font>
-                        </Hyperlink>
-                        <Hyperlink layoutX="680.0" layoutY="22.0" text="Log in" textFill="#1e0101">
-                            <font>
-                                <Font name="System Bold" size="13.0"/>
-                            </font>
-                        </Hyperlink>
-                        <Hyperlink layoutX="197.0" layoutY="22.0" text="Contact" textFill="#0d0000">
-                            <font>
-                                <Font name="System Bold" size="13.0"/>
-                            </font>
-                        </Hyperlink>
-                    </children>
-                </AnchorPane>
+                <fx:include source="header.fxml"/>
+
                 <AnchorPane layoutX="-4.0" layoutY="80.0" prefHeight="502.0" prefWidth="750.0"
                             BorderPane.alignment="CENTER">
                     <children>
