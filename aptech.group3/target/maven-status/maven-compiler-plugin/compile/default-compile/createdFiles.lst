@@ -1,10 +1,5 @@
 khutro\aptech\group3\App.class
 khutro\aptech\group3\utils\AlertMessage.class
-khutro\aptech\group3\PrimaryController.class
-khutro\aptech\group3\dao\user\UserDaoImpl.class
-khutro\aptech\group3\SecondaryController.class
 khutro\aptech\group3\database\ConnectionProvider.class
 module-info.class
-khutro\aptech\group3\dao\user\IUserDao.class
-khutro\aptech\group3\model\UserModel.class
 khutro\aptech\group3\controller\LoginRegisterController.class

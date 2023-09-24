@@ -1,10 +1,5 @@
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\module-info.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\dao\user\UserDaoImpl.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\model\UserModel.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\App.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\dao\user\IUserDao.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\database\ConnectionProvider.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\utils\AlertMessage.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\controller\LoginRegisterController.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\SecondaryController.java
-C:\xampp\htdocs\Project\aptech.group3\src\main\java\khutro\aptech\group3\PrimaryController.java
+D:\PROJECT KI 2\team3\aptech.group3\src\main\java\khutro\aptech\group3\App.java
+D:\PROJECT KI 2\team3\aptech.group3\src\main\java\khutro\aptech\group3\utils\AlertMessage.java
+D:\PROJECT KI 2\team3\aptech.group3\src\main\java\module-info.java
+D:\PROJECT KI 2\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\LoginRegisterController.java
+D:\PROJECT KI 2\team3\aptech.group3\src\main\java\khutro\aptech\group3\database\ConnectionProvider.java
