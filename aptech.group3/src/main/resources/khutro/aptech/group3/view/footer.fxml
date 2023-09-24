@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="260.0" prefWidth="1024.0" layoutX="-5.0" layoutY="1320.0" style="-fx-background-color: A0C49D;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="754.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIÊN HỆ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="563.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facebook: Group3" />
+      <Text layoutX="854.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gmail: Group3@gmail.com" />
+      <Text layoutX="711.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zalo: 000000000" />
+      <Text layoutX="74.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cơ sở:  285 Đội Cấn Ba Đình Hà Nội" />
+      <Text fill="#e1ecc8" layoutX="63.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GROUP" wrappingWidth="300.0">
+         <font>
+            <Font name="System Bold" size="64.0" />
+         </font>
+      </Text>
+      <Text fill="#e1ecc8" layoutX="160.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+         <font>
+            <Font name="System Bold" size="64.0" />
+         </font>
+      </Text>
+      <Text layoutX="754.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GIỚI THIỆU">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="563.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phòng trọ bình dân, giá cả phải chăng, phù hợp với các bạn sinh viên vừa ra trường. Môi trường yên tĩnh, xung quang có các kiến trúc cần thiết như siêu thị, ngân hàng... Liên hệ tôi theo phương pháp trên." textAlignment="JUSTIFY" wrappingWidth="433.7566223144531" />
+   </children>
+</AnchorPane>
