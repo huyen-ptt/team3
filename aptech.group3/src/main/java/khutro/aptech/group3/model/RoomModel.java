@@ -124,4 +124,8 @@ public class RoomModel {
         return "RoomModel{" + "id=" + id + ", roomName=" + roomName + ", roomDescription=" + roomDescription + ", roomPrice=" + roomPrice + ", roomOccupancy=" + roomOccupancy + ", roomStatus=" + roomStatus + ", roomType=" + roomType + ", createdAt=" + createdAt + '}';
     }
 
+    
+
+    
+
 }
