@@ -64,7 +64,7 @@
                                                 <TextField fx:id="areaTextField" GridPane.rowIndex="11" />
                                                 <TextField fx:id="typeTextField" GridPane.rowIndex="13" />
                                     <TextField GridPane.rowIndex="1" />
-                                    <Label prefHeight="18.0" prefWidth="110.0" text="room_images" />
+                                    <!--<Label prefHeight="18.0" prefWidth="110.0" text="room_images" />-->
                                             </children>
                                         </GridPane>
                                         <Label layoutX="15.0" layoutY="367.0" prefHeight="18.0" prefWidth="105.0" text="room_description" />
@@ -119,7 +119,7 @@
                                                         <TableColumn fx:id="statusColumn" prefWidth="83.20001220703125" text="status" />
                                                         <TableColumn fx:id="roomAreaColumn" prefWidth="89.5999755859375" text="room_area" />
                                                         <TableColumn fx:id="typeColumn" prefWidth="112.7999267578125" text="type" />
-                                          <TableColumn fx:id="roomIdColumn1" prefWidth="78.39996415376663" text="room_image" />
+                                          <!--<TableColumn fx:id="roomIdColumn1" prefWidth="78.39996415376663" text="room_image" />-->
                                                     </columns>
                                                 </TableView>
                                             </content>
