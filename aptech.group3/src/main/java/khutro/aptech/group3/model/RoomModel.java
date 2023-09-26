@@ -21,8 +21,9 @@ public class RoomModel {
     private String roomType;
     private Double roomArea;
     private Timestamp createdAt; // Add this field
+    private String roomImage;
 
-    public RoomModel(String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea) {
+    public RoomModel(String roomImage, String roomName, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomDescription, Double roomArea) {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
         this.roomPrice = roomPrice;
@@ -30,9 +31,10 @@ public class RoomModel {
         this.roomStatus = roomStatus;
         this.roomType = roomType;
         this.roomArea = roomArea;
+        this.roomImage = roomImage;
     }
 
-    public RoomModel(int id, String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea, Timestamp createdAt) {
+    public RoomModel(String roomImage, int id, String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea, Timestamp createdAt) {
         this.id = id;
         this.roomName = roomName;
         this.roomDescription = roomDescription;
@@ -42,6 +44,7 @@ public class RoomModel {
         this.roomType = roomType;
         this.roomArea = roomArea;
         this.createdAt = createdAt;
+        this.roomImage = roomImage;
     }
 
     
@@ -110,7 +113,14 @@ public class RoomModel {
         this.roomArea = roomArea;
     }
     
-
+//    public void getroomImage(String roomImage){
+//        this.roomImage = roomImage;
+//    }
+//    
+//    public void setroomImage(String roomImage) {
+//        this.roomImage = roomImage;
+//    }
+    
     public Timestamp getCreatedAt() {
         return createdAt;
     }
@@ -124,8 +134,7 @@ public class RoomModel {
         return "RoomModel{" + "id=" + id + ", roomName=" + roomName + ", roomDescription=" + roomDescription + ", roomPrice=" + roomPrice + ", roomOccupancy=" + roomOccupancy + ", roomStatus=" + roomStatus + ", roomType=" + roomType + ", createdAt=" + createdAt + '}';
     }
 
-    
-
-    
-
+    public String getroomImage() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

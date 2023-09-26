@@ -13,20 +13,20 @@
          <children>
             <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="251.0" prefWidth="333.0">
                <children>
-                  <ImageView fx:id="imageViewThumb" fitHeight="196.0" fitWidth="267.0" layoutX="36.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+<!--                  <ImageView fx:id="imageViewThumb" fitHeight="196.0" fitWidth="267.0" layoutX="36.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/2.jpg" />
+                        <Image fx:id="imageView" url="@../image/2.jpg" />
                      </image>
-                  </ImageView>
+                  </ImageView>-->
                </children>
             </Pane>
             <Pane fx:id="tableViewRoom" layoutX="322.0" layoutY="-4.0" prefHeight="251.0" prefWidth="718.0">
                <children>
-                      <Text fx:id="textRoomArea" layoutX="28.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 20m2">
+<!--                    <Text fx:id="textRoomArea" layoutX="28.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 20m2">
                      <font>
                         <Font size="15.0" />
                      </font>
-                  </Text>
+                    </Text>-->
                   <Text fx:id="textRoomPrice" layoutX="28.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: 2 million VND">
                      <font>
                         <Font size="15.0" />
@@ -37,7 +37,12 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Text fx:id="textRoomStatus" layoutX="28.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: full (2/2)" wrappingWidth="146.80859375">
+<!--                  <Text fx:id="textRoomStatus" layoutX="28.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: full (2/2)" wrappingWidth="146.80859375">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>-->
+                  <Text fx:id="textRoomArea" layoutX="28.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: full (2/2)" wrappingWidth="146.80859375">
                      <font>
                         <Font size="15.0" />
                      </font>

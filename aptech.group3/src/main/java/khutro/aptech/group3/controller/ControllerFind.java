@@ -107,7 +107,8 @@ public class ControllerFind {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/khutro", "root", "");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM room");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM room LIMIT 5");
+
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -121,7 +122,7 @@ public class ControllerFind {
                 Timestamp createdAt = resultSet.getTimestamp("room createdAt");
                 
 
-                RoomModel room = new RoomModel(id, roomName, roomDescription, roomPrice, roomOccupancy, roomStatus, roomType, roomArea, createdAt);
+                RoomModel room = new RoomModel(roomName, roomDescription, roomPrice, id, roomStatus, roomType, roomArea);
                 rooms.add(room);
             }
             
@@ -162,7 +163,7 @@ public class ControllerFind {
 
 
 
-    public void initialize() {
+//    public void initialize() {
 //        // Truy vấn cơ sở dữ liệu để lấy thông tin phòng trọ
 ////        RoomModel room = roomDao.getRoomInfo(); // Thay bằng phương thức truy vấn thích hợp
 //
@@ -173,6 +174,7 @@ public class ControllerFind {
 //        roomDescriptionColumn.setText("Room description: " + room.getRoomDescription());
 //        statusColumn.setText("Status: " + room.isRoomStatus());
 //        nameColumn.setText("Room name: " + room.getRoomName());
-    }
+//    }
+    
 }
 

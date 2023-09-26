@@ -42,7 +42,7 @@ public class RoomDaoImpl implements IRoomDao {
                     String type = resultSet.getString("type");
                     Timestamp created_time = resultSet.getTimestamp("created_time");
 
-                    RoomModel roomModel = new RoomModel(id, room_name, room_description, price, max_occupancy, status, type, room_area, created_time);
+                    RoomModel roomModel = new RoomModel(room_name, room_description, price, id, status, type, room_area);
                     rooms.add(roomModel);
                 }
             } catch (SQLException e) {
