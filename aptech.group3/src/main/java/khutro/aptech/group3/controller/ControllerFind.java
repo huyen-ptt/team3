@@ -20,7 +20,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import khutro.aptech.group3.dao.IRoomDao;
+import khutro.aptech.group3.dao.RoomDaoImpl;
+import khutro.aptech.group3.database.ConnectionProvider;
 import khutro.aptech.group3.model.RoomModel;
 
 
@@ -101,7 +107,8 @@ public class ControllerFind {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/khutro", "root", "");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM room");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM room LIMIT 5");
+
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -115,7 +122,7 @@ public class ControllerFind {
                 Timestamp createdAt = resultSet.getTimestamp("room createdAt");
                 
 
-                RoomModel room = new RoomModel(id, roomName, roomDescription, roomPrice, roomOccupancy, roomStatus, roomType, roomArea, createdAt);
+                RoomModel room = new RoomModel(roomName, roomDescription, roomPrice, id, roomStatus, roomType, roomArea);
                 rooms.add(room);
             }
             
@@ -124,5 +131,50 @@ public class ControllerFind {
         }
 	return rooms;
 }
+//    @FXML
+//    private ImageView roomImage;
+
+    ConnectionProvider connection = new ConnectionProvider();
+    RoomDaoImpl roomDao = new RoomDaoImpl(connection.getConnection());
+
+    @FXML
+    private TextField nameTextField, priceTextField, occupancyTextField, statusTextField, areaTextField;
+
+    @FXML
+    private TextArea descriptionTextArea;
+    @FXML
+    private TableView<RoomModel> tableViewRoom;
+    @FXML
+    private TableColumn<RoomModel, String> nameColumn;
+    @FXML
+    private TableColumn<RoomModel, String> roomDescriptionColumn;
+
+    @FXML
+    private TableColumn<RoomModel, Double> priceColumn;
+
+    @FXML
+    private TableColumn<RoomModel, Boolean> statusColumn;
+
+    @FXML
+    private TableColumn<RoomModel, Double> roomAreaColumn;
+
+    
+    private ObservableList<RoomModel> roomList;
+
+
+
+//    public void initialize() {
+//        // Truy vấn cơ sở dữ liệu để lấy thông tin phòng trọ
+////        RoomModel room = roomDao.getRoomInfo(); // Thay bằng phương thức truy vấn thích hợp
+//
+//        // Cập nhật các thành phần trong giao diện với dữ liệu từ cơ sở dữ liệu
+////        roomImage.setImage(new Image(room.getImageUrl()));
+//        roomAreaColumn.setText("Room area: " + room.getRoomArea());
+//        priceColumn.setText("Price: " + room.getRoomPrice() + " VND");
+//        roomDescriptionColumn.setText("Room description: " + room.getRoomDescription());
+//        statusColumn.setText("Status: " + room.isRoomStatus());
+//        nameColumn.setText("Room name: " + room.getRoomName());
+//    }
+    
 }
 
