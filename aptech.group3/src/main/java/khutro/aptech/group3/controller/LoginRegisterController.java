@@ -128,7 +128,7 @@ public class LoginRegisterController implements Initializable {
 
                 //ALL DATA CORRECT -> GO TO DASHBOARD FORM
                 if (result.next()) {
-                    alert.successMessage("You've signed up");
+//                    alert.successMessage("You've signed up");
 
                     App.setRoot("dashboard");
                     //HIDE WINDOW OF LOGIN FORM

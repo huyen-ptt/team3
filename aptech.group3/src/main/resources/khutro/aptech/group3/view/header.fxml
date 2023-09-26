@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane layoutY="-1.0" prefHeight="70.0" prefWidth="1024.0" style="-fx-background-color: #A0C49D;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khutro.aptech.group3.controller.HeaderController">
+    <children>
+        <Text cache="true" fill="#0aff75" layoutX="14.0" layoutY="40.0" lineSpacing="1.0" stroke="#17b945" strokeType="OUTSIDE" strokeWidth="0.0" text="GROUP 3" textAlignment="CENTER" wrappingWidth="68.0">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <effect>
+                <InnerShadow>
+                    <color>
+                        <Color red="0.9210526347160339" green="0.03411306068301201" blue="0.03411306068301201" />
+                    </color>
+                </InnerShadow>
+            </effect>
+        </Text>
+        <Hyperlink layoutX="117.0" layoutY="21.0" onAction="#handleswitchHome" text="Home" textAlignment="CENTER" textFill="#070000">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Hyperlink>
+        <Hyperlink layoutX="938.0" layoutY="23.0" onAction="#handleswitchLogin" text="Logout" textFill="#1e0101">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Hyperlink>
+        <Hyperlink layoutX="197.0" layoutY="22.0" onAction="#handleswitchContact" text="Contact" textFill="#0d0000">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Hyperlink>
+        <Label fx:id="labelDetail" layoutX="287.0" layoutY="26.0" onMouseClicked="#handleswitchDetail" text="Detail" textFill="#0d0000">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="354.0" layoutY="26.0" onMouseClicked="#handleswitchAddRoom" text="Add Room" />
+    </children>
+</AnchorPane>
