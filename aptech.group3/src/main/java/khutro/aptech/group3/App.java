@@ -18,7 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("loginRegister"), 1024, 600);
+        scene = new Scene(loadFXML("contact"), 1024, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());       //(3)
         stage.setScene(scene);
         stage.show();

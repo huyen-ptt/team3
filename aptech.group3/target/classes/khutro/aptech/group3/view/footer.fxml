@@ -14,13 +14,13 @@
       <Text layoutX="563.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facebook: Group3" />
       <Text layoutX="854.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gmail: Group3@gmail.com" />
       <Text layoutX="711.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zalo: 000000000" />
-      <Text layoutX="24.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cơ sở:  285 Đội Cấn Ba Đình Hà Nội" />
-      <Text fill="#e1ecc8" layoutX="163.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GROUP" wrappingWidth="300.0">
+      <Text layoutX="74.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cơ sở:  285 Đội Cấn Ba Đình Hà Nội" />
+      <Text fill="#e1ecc8" layoutX="63.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GROUP" wrappingWidth="300.0">
          <font>
             <Font name="System Bold" size="64.0" />
          </font>
       </Text>
-      <Text fill="#e1ecc8" layoutX="260.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+      <Text fill="#e1ecc8" layoutX="160.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
          <font>
             <Font name="System Bold" size="64.0" />
          </font>

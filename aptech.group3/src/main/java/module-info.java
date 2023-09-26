@@ -1,6 +1,7 @@
 module khutro.aptech.group3 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
     requires java.sql;
     requires org.kordamp.bootstrapfx.core;
     requires java.base;
