@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane fx:controller="khutro.aptech.group3.controller.DashboardController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1701.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1701.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khutro.aptech.group3.controller.DashboardController">
     <content>
         <AnchorPane prefHeight="1667.0" prefWidth="1025.0">
             <children>
@@ -42,9 +42,9 @@
                         <AnchorPane layoutX="2.0" layoutY="369.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1090.0" prefWidth="1020.0">
                             <children>
                        
-                                <ListView fx:id="listViewRooms" layoutX="21.0" layoutY="66.0" prefHeight="986.0" prefWidth="980.0" />
+                                <ListView fx:id="listViewRooms" layoutY="78.0" prefHeight="1005.0" prefWidth="980.0" />
 
-                                <!--Tìm kiếm-->
+                                <!--                       Tìm kiếm-->
                                 <AnchorPane layoutX="25.0" layoutY="-19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="600.0">
                                     <children>
                                         <Pane layoutX="-25.0" layoutY="14.0" prefHeight="79.0" prefWidth="1054.0">
@@ -61,10 +61,45 @@
                                         </Pane>
                                     </children>
                                 </AnchorPane>
-                                
+                        <AnchorPane id="AnchorPane" layoutX="-6.0" layoutY="98.0" prefHeight="257.0" prefWidth="1031.0">
+                           <children>
+                              <Pane layoutY="59.0" prefHeight="244.0" prefWidth="1031.0">
+                                 <children>
+                                    <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="251.0" prefWidth="333.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewThumb" fitHeight="196.0" fitWidth="267.0" layoutX="36.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="tableViewRoom" layoutX="322.0" layoutY="-4.0" prefHeight="251.0" prefWidth="718.0">
+                                       <children>
+                                          <Text fx:id="textRoomPrice" layoutX="28.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="textRoomDescription" layoutX="27.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="textRoomArea" layoutX="28.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="146.80859375">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="textRoomName" layoutX="26.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
                             </children>
                         </AnchorPane>
-                        <!--footer-->
                         <AnchorPane layoutY="1439.0" prefHeight="260.0" prefWidth="1024.0" style="-fx-background-color: A0C49D;">
                             <children>
                                 <Text layoutX="711.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIÊN HỆ">

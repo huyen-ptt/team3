@@ -23,43 +23,9 @@ import khutro.aptech.group3.utils.CustomListCell;
  *
  * @author CLD
  */
-public class DashboardController implements Initializable {
+public class DashboardController  {
 
     ConnectionProvider connection = new ConnectionProvider();
-    RoomDaoImpl roomDao = new RoomDaoImpl(connection.getConnection());
-    @FXML
-    private ListView<RoomModel> listViewRooms;
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        List<RoomModel> rooms = roomDao.getAllRooms(); // khai báo arraylist hứng dữ liệu 
-        System.out.println(rooms);
-
-        // Gán danh sách dữ liệu cho ListView
-        listViewRooms.getItems().addAll(rooms);
-
-        // Gán giao diện từ item.fxml cho các mục trong ListView
-        listViewRooms.setCellFactory(param -> new CustomListCell());
-
-        // Sử dụng ChangeListener để theo dõi sự thay đổi trong việc chọn mục
-        listViewRooms.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<RoomModel>() {
-            @Override
-            public void changed(ObservableValue<? extends RoomModel> observable, RoomModel oldValue, RoomModel newValue) {
-                if (newValue != null) {
-                    // Lấy dữ liệu của mục đã chọn và thực hiện các xử lý cần thiết
-                    String selectedRoomName = newValue.getRoomName();
-                    Double selectedRoomPrice = newValue.getRoomPrice();
-
-                    // In ra thông tin của mục đã chọn
-                    System.out.println(newValue.toString());
-                }
-            }
-        });
-
-    }
-
-    public void handelswitchDetail() throws IOException {
-        App.setRoot("detail");
-    }
+    
 
 }

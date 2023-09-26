@@ -5,6 +5,7 @@
 package khutro.aptech.group3.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import khutro.aptech.group3.model.RoomModel;
@@ -18,15 +19,15 @@ public class ItemRoomController {
     @FXML
     private ImageView imageViewThumb; // Chưa xử lý
     @FXML
-    private Text textRoomName, textRoomStatus, textRoomDescription, textRoomPrice, textRoomArea;
-    //    private Text textRoomName, textRoomDescription, textRoomPrice, textRoomArea, textRoomOccupancy;
+        private Text textRoomName, textRoomDescription, textRoomPrice, textRoomArea;
+//    private Image image;
 
     public void setData(RoomModel roomModel) {
-        textRoomName.setText(roomModel.getRoomName());
-        textRoomStatus.setText(""+roomModel.isRoomStatus());
-        textRoomDescription.setText(roomModel.getRoomDescription());
-        textRoomPrice.setText(""+roomModel.getRoomPrice());
-        textRoomArea.setText(""+roomModel.getRoomArea());
+//        imageViewThumb.setImage(image);
+        textRoomName.setText("Room name: "+roomModel.getRoomName());
+        textRoomDescription.setText("Room description: "+roomModel.getRoomDescription());
+        textRoomPrice.setText("room price: "+roomModel.getRoomPrice());
+        textRoomArea.setText("Room area: "+roomModel.getRoomArea());
     }
 
 }
