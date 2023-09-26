@@ -51,17 +51,17 @@
                                     <Image url="@../image/2.jpg" />
                                  </image>
                               </ImageView>
-                              <Text layoutX="338.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acreage: 20m2">
+                              <Text layoutX="338.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 20m2">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="338.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room rates: 2 million VND">
+                              <Text layoutX="338.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: 2 million VND">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="338.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Furniture: air conditioner, hot and cold water, bed. There is a private bathroom.">
+                              <Text layoutX="338.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room desciption: air conditioner, hot and cold water, bed. There is a private bathroom.">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -90,17 +90,17 @@
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="339.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acreage: 22m2">
+                              <Text layoutX="339.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 22m2">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="340.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room rates: 2,5 million VND" wrappingWidth="208.84375">
+                              <Text layoutX="340.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: 2,5 million VND" wrappingWidth="208.84375">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="340.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Furniture: air conditioner, hot and cold water, bed, wardrobe. There is a private bathroom." wrappingWidth="647.384765625">
+                              <Text layoutX="340.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room desciption: air conditioner, hot and cold water, bed, wardrobe. There is a private bathroom." wrappingWidth="647.384765625">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -119,17 +119,17 @@
                                     <Image url="@../image/3.jpg" />
                                  </image>
                               </ImageView>
-                              <Text layoutX="341.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acreage: 25m2">
+                              <Text layoutX="341.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 25m2">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="341.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room rates: 2,8 million VND">
+                              <Text layoutX="341.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: 2,8 million VND">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="341.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Furniture: air conditioner, hot and cold water, bed, wardrobe. There is a private bathroom." wrappingWidth="638.384765625">
+                              <Text layoutX="341.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room desciption: air conditioner, hot and cold water, bed, wardrobe. There is a private bathroom." wrappingWidth="638.384765625">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -158,17 +158,17 @@
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="343.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acreage: 21m2">
+                              <Text layoutX="343.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 21m2">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="343.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room rates: 2,2 million VND">
+                              <Text layoutX="343.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: 2,2 million VND">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="343.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Furniture: air conditioner, hot and cold water, bed. There is a private bathroom.">
+                              <Text layoutX="343.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room desciption: air conditioner, hot and cold water, bed. There is a private bathroom.">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
