@@ -112,14 +112,14 @@
                                                 <TableView fx:id="tableViewRoom" prefHeight="571.0" prefWidth="978.0">
                                                     <columns>
                                                         <TableColumn fx:id="roomIdColumn" prefWidth="78.39996415376663" text="ID" />
-                                                        <TableColumn fx:id="nameColumn" prefWidth="111.20001220703125" text="room_images" />
-                                                        <TableColumn fx:id="roomDescriptionColumn" prefWidth="97.5999755859375" text="room_name" />
-                                                        <TableColumn fx:id="priceColumn" prefWidth="192.800048828125" text="room_description" />
-                                                        <TableColumn fx:id="maxOccupancyColumn" prefWidth="72.00003051757812" text="price" />
-                                                        <TableColumn fx:id="statusColumn" prefWidth="124.79998779296875" text="max_occupancy" />
-                                                        <TableColumn fx:id="roomAreaColumn" prefWidth="89.5999755859375" text="status" />
-                                                        <TableColumn fx:id="typeColumn" prefWidth="112.7999267578125" text="room_area" />
-                                          <TableColumn fx:id="typeColumn1" prefWidth="94.4000244140625" text="type" />
+                                                        <TableColumn fx:id="nameColumn" prefWidth="111.20001220703125" text="room_name" />
+                                                        <TableColumn fx:id="roomDescriptionColumn" prefWidth="200.0" text="room_description" />
+                                                        <TableColumn fx:id="priceColumn" prefWidth="91.199951171875" text="price" />
+                                                        <TableColumn fx:id="maxOccupancyColumn" prefWidth="114.4000244140625" text="max_occupancy" />
+                                                        <TableColumn fx:id="statusColumn" prefWidth="83.20001220703125" text="status" />
+                                                        <TableColumn fx:id="roomAreaColumn" prefWidth="89.5999755859375" text="room_area" />
+                                                        <TableColumn fx:id="typeColumn" prefWidth="112.7999267578125" text="type" />
+                                          <TableColumn fx:id="roomIdColumn1" prefWidth="78.39996415376663" text="room_image" />
                                                     </columns>
                                                 </TableView>
                                             </content>
