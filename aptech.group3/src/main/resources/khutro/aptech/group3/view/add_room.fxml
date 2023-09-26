@@ -16,6 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 
+
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="1383.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khutro.aptech.group3.controller.AddRoomController">
     <children>
         <AnchorPane prefHeight="200.0" prefWidth="200.0">
@@ -50,13 +51,15 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
-                                            <children>
+                                            <children> 
+                                                <Label prefHeight="18.0" prefWidth="32.0" text="image" GridPane.rowIndex="0" />
                                                 <Label prefHeight="18.0" prefWidth="106.0" text="room_name" GridPane.rowIndex="2" />
                                                 <Label prefHeight="18.0" prefWidth="108.0" text="price" GridPane.rowIndex="4" />
                                                 <Label prefHeight="18.0" prefWidth="94.0" text="max_occupancy" GridPane.rowIndex="6" />
                                                 <Label prefHeight="18.0" prefWidth="46.0" text="status" GridPane.rowIndex="8" />
                                                 <Label prefHeight="18.0" prefWidth="78.0" text="room_area" GridPane.rowIndex="10" />
                                                 <Label prefHeight="18.0" prefWidth="32.0" text="type" GridPane.rowIndex="12" />
+                                                <TextField fx:id="imageTextField" GridPane.rowIndex="1" />
                                                 <TextField fx:id="nameTextField" GridPane.rowIndex="3" />
                                                 <TextField fx:id="priceTextField" GridPane.rowIndex="5" />
                                                 <TextField fx:id="occupancyTextField" GridPane.rowIndex="7" />
@@ -64,7 +67,7 @@
                                                 <TextField fx:id="areaTextField" GridPane.rowIndex="11" />
                                                 <TextField fx:id="typeTextField" GridPane.rowIndex="13" />
                                     <TextField GridPane.rowIndex="1" />
-                                    <Label prefHeight="18.0" prefWidth="110.0" text="room_images" />
+                                    <!--<Label prefHeight="18.0" prefWidth="110.0" text="room_images" />-->
                                             </children>
                                         </GridPane>
                                         <Label layoutX="15.0" layoutY="367.0" prefHeight="18.0" prefWidth="105.0" text="room_description" />
@@ -111,15 +114,16 @@
                                             <content>
                                                 <TableView fx:id="tableViewRoom" prefHeight="571.0" prefWidth="978.0">
                                                     <columns>
+                                                        <TableColumn fx:id="imageColumn" prefWidth="100" text="Image" />
                                                         <TableColumn fx:id="roomIdColumn" prefWidth="78.39996415376663" text="ID" />
-                                                        <TableColumn fx:id="nameColumn" prefWidth="111.20001220703125" text="room_images" />
-                                                        <TableColumn fx:id="roomDescriptionColumn" prefWidth="97.5999755859375" text="room_name" />
-                                                        <TableColumn fx:id="priceColumn" prefWidth="192.800048828125" text="room_description" />
-                                                        <TableColumn fx:id="maxOccupancyColumn" prefWidth="72.00003051757812" text="price" />
-                                                        <TableColumn fx:id="statusColumn" prefWidth="124.79998779296875" text="max_occupancy" />
-                                                        <TableColumn fx:id="roomAreaColumn" prefWidth="89.5999755859375" text="status" />
-                                                        <TableColumn fx:id="typeColumn" prefWidth="112.7999267578125" text="room_area" />
-                                          <TableColumn fx:id="typeColumn1" prefWidth="94.4000244140625" text="type" />
+                                                        <TableColumn fx:id="nameColumn" prefWidth="111.20001220703125" text="room_name" />
+                                                        <TableColumn fx:id="roomDescriptionColumn" prefWidth="200.0" text="room_description" />
+                                                        <TableColumn fx:id="priceColumn" prefWidth="91.199951171875" text="price" />
+                                                        <TableColumn fx:id="maxOccupancyColumn" prefWidth="114.4000244140625" text="max_occupancy" />
+                                                        <TableColumn fx:id="statusColumn" prefWidth="83.20001220703125" text="status" />
+                                                        <TableColumn fx:id="roomAreaColumn" prefWidth="89.5999755859375" text="room_area" />
+                                                        <TableColumn fx:id="typeColumn" prefWidth="112.7999267578125" text="type" />
+<!--                                                        <TableColumn fx:id="roomIdColumn1" prefWidth="78.39996415376663" text="room_image" />-->
                                                     </columns>
                                                 </TableView>
                                             </content>

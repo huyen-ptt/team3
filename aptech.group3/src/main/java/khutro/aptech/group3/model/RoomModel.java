@@ -13,6 +13,7 @@ import java.sql.Timestamp;
 public class RoomModel {
 
     private int id;
+    private String roomImage;
     private String roomName;
     private String roomDescription;
     private Double roomPrice;
@@ -22,7 +23,7 @@ public class RoomModel {
     private Double roomArea;
     private Timestamp createdAt; // Add this field
 
-    public RoomModel(String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea) {
+    public RoomModel(String roomImage, String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea) {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
         this.roomPrice = roomPrice;
@@ -30,11 +31,13 @@ public class RoomModel {
         this.roomStatus = roomStatus;
         this.roomType = roomType;
         this.roomArea = roomArea;
+        this.roomImage = roomImage;
     }
 
     public RoomModel(int id, String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea, Timestamp createdAt) {
         this.id = id;
         this.roomName = roomName;
+        this.roomImage = roomImage;
         this.roomDescription = roomDescription;
         this.roomPrice = roomPrice;
         this.roomOccupancy = roomOccupancy;
@@ -42,9 +45,8 @@ public class RoomModel {
         this.roomType = roomType;
         this.roomArea = roomArea;
         this.createdAt = createdAt;
-    }
 
-    
+    }
 
     public int getId() {
         return id;
@@ -52,6 +54,14 @@ public class RoomModel {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getImage() {
+        return roomImage;
+    }
+
+    public void setImage(String image) {
+        this.roomImage = roomImage;
     }
 
     public String getRoomName() {
@@ -109,7 +119,6 @@ public class RoomModel {
     public void setRoomArea(Double roomArea) {
         this.roomArea = roomArea;
     }
-    
 
     public Timestamp getCreatedAt() {
         return createdAt;
@@ -123,9 +132,5 @@ public class RoomModel {
     public String toString() {
         return "RoomModel{" + "id=" + id + ", roomName=" + roomName + ", roomDescription=" + roomDescription + ", roomPrice=" + roomPrice + ", roomOccupancy=" + roomOccupancy + ", roomStatus=" + roomStatus + ", roomType=" + roomType + ", createdAt=" + createdAt + '}';
     }
-
-    
-
-    
 
 }
