@@ -105,6 +105,7 @@ public class AddRoomController implements Initializable {
         List<RoomModel> rooms = roomDao.getAllRooms(); // khai báo arraylist hứng dữ liệu 
         roomList = FXCollections.observableArrayList(rooms); // set dữ liệu trên vào roomList
         tableViewRoom.setItems(roomList); // 
+        System.out.println(rooms);
     }
 
     public void handleSave() {

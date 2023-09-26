@@ -16,5 +16,5 @@ public interface IRoomDao {
     List<RoomModel> getAllRooms(); //lấy ra tất cả thông tin bảng room
 
     boolean insertRoom(RoomModel roomModel);
-
 }
+
