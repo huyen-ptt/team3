@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS Room (
     price FLOAT,
     max_occupancy INT,
     status BOOLEAN,
+    image text,
     room_area DECIMAL(10, 2),
     type VARCHAR(255),
     created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP

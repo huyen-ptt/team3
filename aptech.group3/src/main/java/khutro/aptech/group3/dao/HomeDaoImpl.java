@@ -4,17 +4,10 @@
  */
 package khutro.aptech.group3.dao;
 
-import java.util.List;
-import khutro.aptech.group3.model.RoomModel;
-
 /**
  *
  * @author CLD
  */
-public interface IRoomDao {
-
-    List<RoomModel> getAllRooms(); //lấy ra tất cả thông tin bảng room
-
-    boolean insertRoom(RoomModel roomModel);
-
+public class HomeDaoImpl implements IHomeDao {
+    
 }
