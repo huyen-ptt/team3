@@ -47,8 +47,10 @@ public class RoomModel {
         this.roomImage = roomImage;
     }
 
+    public RoomModel(int i, String no_rooms_found) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
-
     public int getId() {
         return id;
     }
