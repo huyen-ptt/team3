@@ -17,4 +17,5 @@ public interface IRoomDao {
 
     boolean insertRoom(RoomModel roomModel);
 
+    boolean deleteRoom(RoomModel roomModel); // Xóa phòng
 }

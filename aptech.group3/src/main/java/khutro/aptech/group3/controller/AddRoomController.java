@@ -21,6 +21,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import khutro.aptech.group3.database.ConnectionProvider;
 import khutro.aptech.group3.model.RoomModel;
 import khutro.aptech.group3.dao.RoomDaoImpl;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 
 /**
  *
@@ -61,6 +63,9 @@ public class AddRoomController implements Initializable {
     private TableColumn<RoomModel, Double> roomAreaColumn;
 
     @FXML
+    private Button deleteButton;
+
+    @FXML
     private TableColumn<RoomModel, String> typeColumn;
     private ObservableList<RoomModel> roomList;
 
@@ -79,6 +84,8 @@ public class AddRoomController implements Initializable {
 
         tableViewRoom.setOnMouseClicked(event -> {
             if (event.getClickCount() == 1) { // Check for a single mouse click
+                
+                
                 // Get the selected item from the TableView
                 RoomModel selectedItem = tableViewRoom.getSelectionModel().getSelectedItem();
 
@@ -116,6 +123,7 @@ public class AddRoomController implements Initializable {
         String type = typeTextField.getText().trim();
         String description = descriptionTextArea.getText().trim();
 
+
         // Tạo đối tượng RoomModel từ các giá trị đã hứng
         RoomModel roomModel = new RoomModel(name, description, Double.valueOf(price), Integer.parseInt(occupancy), Boolean.parseBoolean(status), type, Double.valueOf(area));
 
@@ -138,4 +146,32 @@ public class AddRoomController implements Initializable {
         typeTextField.clear();
         descriptionTextArea.clear();
     }
+
+    @FXML
+    public void deleteButtonAction() {
+        String name = nameTextField.getText().trim();
+        String price = priceTextField.getText().trim();
+        String occupancy = occupancyTextField.getText().trim();
+        String status = statusTextField.getText().trim();
+        String area = areaTextField.getText().trim();
+        String type = typeTextField.getText().trim();
+        String description = descriptionTextArea.getText().trim();
+
+     
+                
+        RoomModel roomModel = tableViewRoom.getSelectionModel().getSelectedItem();
+
+        // Tạo đối tượng RoomModel từ các giá trị đã hứng
+//        RoomModel roomModel = new RoomModel(name, description, Double.valueOf(price), Integer.parseInt(occupancy), Boolean.parseBoolean(status), type, Double.valueOf(area));
+
+        boolean isSuccess = roomDao.deleteRoom(roomModel);
+        if (isSuccess) {
+            clearFields();
+            refreshTable();
+            System.out.println("Thành công");
+        } else {
+            System.out.println("Thất bại");
+        }
+    }
+
 }

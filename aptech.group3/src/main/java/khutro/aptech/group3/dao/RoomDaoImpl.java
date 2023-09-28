@@ -72,4 +72,21 @@ public class RoomDaoImpl implements IRoomDao {
         }
     }
 
+  
+  
+    public boolean deleteRoom(RoomModel roomModel) {
+    String query = "DELETE FROM Room WHERE id = ?";
+        System.err.println(roomModel.getRoomName());
+    try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        preparedStatement.setInt(1, roomModel.getId());
+
+        int rowsAffected = preparedStatement.executeUpdate();
+        return rowsAffected > 0;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+
+
 }
