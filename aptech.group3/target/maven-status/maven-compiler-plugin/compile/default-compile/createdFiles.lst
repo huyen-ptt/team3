@@ -5,7 +5,6 @@ module-info.class
 khutro\aptech\group3\controller\AddRoomController.class
 khutro\aptech\group3\App.class
 khutro\aptech\group3\utils\AlertMessage.class
-khutro\aptech\group3\controller\DashboardController$1.class
 khutro\aptech\group3\model\RoomModel.class
 khutro\aptech\group3\dao\IRoomDao.class
 khutro\aptech\group3\utils\CustomListCell.class
