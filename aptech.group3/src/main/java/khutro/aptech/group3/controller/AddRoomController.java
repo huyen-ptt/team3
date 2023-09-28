@@ -21,8 +21,14 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import khutro.aptech.group3.database.ConnectionProvider;
 import khutro.aptech.group3.model.RoomModel;
 import khutro.aptech.group3.dao.RoomDaoImpl;
+<<<<<<< HEAD
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+=======
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+
+>>>>>>> 498178fa6b1ef9456382df4ce6648113ecf20f77
 
 /**
  *
@@ -143,17 +149,34 @@ public class AddRoomController implements Initializable {
         String description = descriptionTextArea.getText().trim();
          String image = imageTextField.getText().trim(); // Lấy đường dẫn hình ảnh từ TextField
 
+<<<<<<< HEAD
         // Tạo đối tượng RoomModel từ các giá trị đã hứng
         RoomModel roomModel = new RoomModel(image,name, description, Double.valueOf(price), Integer.parseInt(occupancy), Boolean.parseBoolean(status), type, Double.valueOf(area));
+=======
+        try {
+            // Tạo đối tượng RoomModel từ các giá trị đã hứng
+            RoomModel roomModel = new RoomModel(name, description, Double.valueOf(price), Integer.parseInt(occupancy), Boolean.parseBoolean(status), type, Double.valueOf(area));
+>>>>>>> 498178fa6b1ef9456382df4ce6648113ecf20f77
 
-        boolean isSuccess = roomDao.insertRoom(roomModel);
-        if (isSuccess) {
-            clearFields();
-            refreshTable();
-            System.out.println("Thành công");
-        } else {
-            System.out.println("Thất bại");
+            boolean isSuccess = roomDao.insertRoom(roomModel);
+            if (isSuccess) {
+                clearFields();
+                refreshTable();
+                showAlert("Success", "Room information saved successfully.");
+            } else {
+                showAlert("Error", "Failed to save room information.");
+            }
+        } catch (NumberFormatException e) {
+            showAlert("Error", "Invalid number format in one or more fields.");
         }
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     public void clearFields() {
@@ -167,4 +190,36 @@ public class AddRoomController implements Initializable {
         imageTextField.clear(); // Xóa cả đường dẫn hình ảnh khi clearFields
         imageView.setImage(null); 
     }
+    
+    //UPDATE
+    @FXML
+    public void roomUpdate() {
+        // Retrieve the selected item from the table
+        RoomModel selectedItem = tableViewRoom.getSelectionModel().getSelectedItem();
+
+        if (selectedItem != null) {
+            // Get the current values from the selected item
+            String currentName = selectedItem.getRoomName();
+            String currentPrice = String.valueOf(selectedItem.getRoomPrice());
+            String currentOccupancy = String.valueOf(selectedItem.getRoomOccupancy());
+            String currentStatus = String.valueOf(selectedItem.isRoomStatus());
+            String currentArea = String.valueOf(selectedItem.getRoomArea());
+            String currentType = selectedItem.getRoomType();
+            String currentDescription = selectedItem.getRoomDescription();
+
+            // Populate the input fields with the current values
+            nameTextField.setText(currentName);
+            priceTextField.setText(currentPrice);
+            occupancyTextField.setText(currentOccupancy);
+            statusTextField.setText(currentStatus);
+            areaTextField.setText(currentArea);
+            typeTextField.setText(currentType);
+            descriptionTextArea.setText(currentDescription);
+
+            // You can also update the UI or perform other actions as needed
+        } else {
+            showAlert("Error", "Please select a room to update.");
+        }
+    }
+
 }
