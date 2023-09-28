@@ -5,6 +5,11 @@
 package khutro.aptech.group3.controller;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -23,7 +28,8 @@ import khutro.aptech.group3.model.RoomModel;
 import khutro.aptech.group3.dao.RoomDaoImpl;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 
 /**
  *
@@ -62,7 +68,8 @@ public class AddRoomController implements Initializable {
 
     @FXML
     private TableColumn<RoomModel, Double> roomAreaColumn;
-
+    @FXML
+    private Button deleteButton;
     @FXML
     private TableColumn<RoomModel, String> typeColumn;
     private ObservableList<RoomModel> roomList;
@@ -154,7 +161,7 @@ public class AddRoomController implements Initializable {
         typeTextField.clear();
         descriptionTextArea.clear();
     }
-    
+
     //UPDATE
     @FXML
     public void roomUpdate() {
@@ -183,6 +190,100 @@ public class AddRoomController implements Initializable {
             // You can also update the UI or perform other actions as needed
         } else {
             showAlert("Error", "Please select a room to update.");
+        }
+    }
+
+    @FXML
+    public void deleteButtonAction() {
+        String name = nameTextField.getText().trim();
+        String price = priceTextField.getText().trim();
+        String occupancy = occupancyTextField.getText().trim();
+        String status = statusTextField.getText().trim();
+        String area = areaTextField.getText().trim();
+        String type = typeTextField.getText().trim();
+        String description = descriptionTextArea.getText().trim();
+
+        RoomModel roomModel = tableViewRoom.getSelectionModel().getSelectedItem();
+
+        // Tạo đối tượng RoomModel từ các giá trị đã hứng
+//        RoomModel roomModel = new RoomModel(name, description, Double.valueOf(price), Integer.parseInt(occupancy), Boolean.parseBoolean(status), type, Double.valueOf(area));
+        boolean isSuccess = roomDao.deleteRoom(roomModel);
+        if (isSuccess) {
+            clearFields();
+            refreshTable();
+            System.out.println("Thành công");
+        } else {
+            System.out.println("Thất bại");
+        }
+    }
+    // chức năng tìm kiếm
+    @FXML
+    private TextField searchTextField;
+//    @FXML
+//    private TableView<RoomModel> roomTableView;
+
+    // Define your TableColumn variables...
+    // Other methods...
+    @FXML
+    private void handleSearch() {
+        String searchTerm = searchTextField.getText().trim();
+
+        // Connect to the database
+        try {
+//            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/khutro", "username", "password");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/khutro", "root", "");
+            // Prepare and execute the search query
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM room WHERE room_name LIKE ?");
+            stmt.setString(1, "%" + searchTerm + "%");
+
+            ResultSet rs = stmt.executeQuery();
+
+            // Populate the TableView with the results
+            ObservableList<RoomModel> roomList = FXCollections.observableArrayList();
+            while (rs.next()) {
+                // Create Room objects from the ResultSet and add them to roomList
+                int id = rs.getInt("id");
+                String roomName = rs.getString("room_name");
+                String roomDescription = rs.getString("room_description");
+                Double roomPrice = rs.getDouble("price");
+                int roomOccupancy = rs.getInt("max_occupancy");
+                boolean roomStatus = rs.getBoolean("status");
+                String roomType = rs.getString("type");
+                Double roomArea = rs.getDouble("room_area");
+//            Timestamp createdAt = rs.getTimestamp("created_at");
+
+                RoomModel room = new RoomModel(roomName, roomDescription, roomPrice, id, roomStatus, roomType, roomArea);
+                roomList.add(room);
+            }
+            System.out.println("here");
+            System.out.println(roomList.toString());
+            // Set the TableView items
+            tableViewRoom.setItems(roomList);
+            tableViewRoom.refresh();
+            // Close the connections
+            rs.close();
+            stmt.close();
+            conn.close();
+
+            // Handle case where no results are found
+            if (roomList.isEmpty()) {
+                // Room not found, display a message
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Room Not Found");
+                alert.setHeaderText(null);
+                alert.setContentText("The room with ID " + searchTerm + " does not exist.");
+                alert.showAndWait();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            // Handle the case where searchTerm is not a valid number
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Invalid Input");
+            alert.setHeaderText(null);
+            alert.setContentText("Please enter a valid room ID.");
+            alert.showAndWait();
         }
     }
 

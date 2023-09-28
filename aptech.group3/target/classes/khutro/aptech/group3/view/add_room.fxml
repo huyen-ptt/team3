@@ -61,12 +61,12 @@
                                                 <Label prefHeight="18.0" prefWidth="32.0" text="type" GridPane.rowIndex="12" />
                                                 <!--<TextField fx:id="imageTextField" GridPane.rowIndex="1" />-->
                                                 <TextField fx:id="nameTextField" promptText="princess, sailor, ..." GridPane.rowIndex="3" />
-                                                <TextField fx:id="priceTextField" GridPane.rowIndex="5" />
-                                                <TextField fx:id="occupancyTextField" GridPane.rowIndex="7" />
-                                                <TextField fx:id="statusTextField" GridPane.rowIndex="9" />
-                                                <TextField fx:id="areaTextField" GridPane.rowIndex="11" />
-                                                <TextField fx:id="typeTextField" GridPane.rowIndex="13" />
-                                                <TextField GridPane.rowIndex="1" />
+                                                <TextField fx:id="priceTextField" promptText="1000" GridPane.rowIndex="5" />
+                                                <TextField fx:id="occupancyTextField" promptText="1, 2, ..." GridPane.rowIndex="7" />
+                                                <TextField fx:id="statusTextField" promptText="true is empty, false is not empty" GridPane.rowIndex="9" />
+                                                <TextField fx:id="areaTextField" promptText="20, 30, ..." GridPane.rowIndex="11" />
+                                                <TextField fx:id="typeTextField" promptText="single, double, ..." GridPane.rowIndex="13" />
+                                                <TextField fx:id="imageTextField" promptText="picture" GridPane.rowIndex="1" />
                                                 <!--<Label prefHeight="18.0" prefWidth="110.0" text="room_images" />-->
                                             </children>
                                         </GridPane>
@@ -93,7 +93,7 @@
                                                         <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                                                     </GridPane.margin>
                                                 </Button>
-                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Delete" GridPane.columnIndex="2">
+                                                <Button mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="26.0" prefWidth="76.0" text="Delete" GridPane.columnIndex="2">
                                                     <GridPane.margin>
                                                         <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                                                     </GridPane.margin>
@@ -139,6 +139,13 @@
                                         </ScrollPane>
                                     </children>
                                 </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <!--<fx:include source="find.fxml" />-->
+                        <AnchorPane layoutX="42.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="891.0">
+                            <children>
+                                <TextField fx:id="searchTextField" layoutX="4.0" layoutY="3.0" prefHeight="25.0" prefWidth="322.0" promptText="Search" />
+                                <Button layoutX="361.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
                             </children>
                         </AnchorPane>
                     </right>

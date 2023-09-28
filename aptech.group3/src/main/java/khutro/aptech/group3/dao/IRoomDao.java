@@ -16,5 +16,8 @@ public interface IRoomDao {
     List<RoomModel> getAllRooms(); //lấy ra tất cả thông tin bảng room
 
     boolean insertRoom(RoomModel roomModel);
-}
+//    boolean handleSearch(RoomModel roomModel);
 
+    boolean deleteRoom(RoomModel roomModel);
+    // Xóa phòng
+}
