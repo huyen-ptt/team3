@@ -83,7 +83,7 @@
                                        <GridPane.margin>
                                           <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                                        </GridPane.margin></Button>
-                                                <Button mnemonicParsing="false" onAction="#roomUpdate" prefHeight="26.0" prefWidth="89.0" text="Update" GridPane.columnIndex="1">
+                                                <Button mnemonicParsing="false" onAction="#handleUpdate" prefHeight="26.0" prefWidth="89.0" text="Update" GridPane.columnIndex="1">
                                        <GridPane.margin>
                                           <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                                        </GridPane.margin></Button>

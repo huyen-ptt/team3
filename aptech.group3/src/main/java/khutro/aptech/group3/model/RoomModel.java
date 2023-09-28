@@ -44,6 +44,18 @@ public class RoomModel {
         this.createdAt = createdAt;
     }
 
+    public RoomModel(int id, String newName, String newDescription, double newPrice, int newOccupancy, boolean newStatus, String newType, double newArea) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public RoomModel(int id, String newName, String newDescription, double newPrice, int newOccupancy, boolean newStatus, String newType, double newArea) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public RoomModel(int id, String newName, String newDescription, double newPrice, int newOccupancy, boolean newStatus, String newType, double newArea) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     
 
     public int getId() {

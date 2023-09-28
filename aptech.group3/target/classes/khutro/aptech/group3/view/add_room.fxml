@@ -24,7 +24,7 @@
                     <left>
                         <AnchorPane prefHeight="598.0" prefWidth="346.0" BorderPane.alignment="CENTER">
                             <children>
-                                <AnchorPane layoutX="24.0" layoutY="12.0" prefHeight="590.0" prefWidth="298.0" stylesheets="@../style/admin.css">
+                                <AnchorPane fx:id="insertViewRoom" layoutX="24.0" layoutY="12.0" prefHeight="590.0" prefWidth="298.0" stylesheets="@../style/admin.css">
                                     <styleClass>
                                         <String fx:value="white-form" />
                                         <String fx:value="boder" />
@@ -83,7 +83,7 @@
                                        <GridPane.margin>
                                           <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                                        </GridPane.margin></Button>
-                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Update" GridPane.columnIndex="1">
+                                                <Button mnemonicParsing="false" onAction="#handleUpdate" prefHeight="26.0" prefWidth="89.0" text="Update" GridPane.columnIndex="1">
                                        <GridPane.margin>
                                           <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                                        </GridPane.margin></Button>
@@ -91,7 +91,6 @@
                                        <GridPane.margin>
                                           <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                                        </GridPane.margin></Button>
-                                    <Button layoutX="110.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Update" />
                                             </children>
                                         </GridPane>
                                     </children>
