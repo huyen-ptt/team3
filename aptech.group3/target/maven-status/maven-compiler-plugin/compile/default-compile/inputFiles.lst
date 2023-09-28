@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 D:\team3\aptech.group3\src\main\java\khutro\aptech\group3\App.java
 D:\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\LoginRegisterController.java
 D:\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\AddRoomController.java
@@ -12,19 +11,3 @@ D:\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\ItemRoomCon
 D:\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\HeaderController.java
 D:\team3\aptech.group3\src\main\java\khutro\aptech\group3\dao\RoomDaoImpl.java
 D:\team3\aptech.group3\src\main\java\khutro\aptech\group3\utils\AlertMessage.java
-=======
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\LoginRegisterController.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\AddRoomController.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\DashboardController.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\dao\IRoomDao.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\App.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\HeaderController.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\model\RoomModel.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\utils\AlertMessage.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\ControllerFind.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\controller\ItemRoomController.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\dao\RoomDaoImpl.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\utils\CustomListCell.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\module-info.java
-C:\Users\VuongTheThuLinh\Documents\GitHub\team3\aptech.group3\src\main\java\khutro\aptech\group3\database\ConnectionProvider.java
->>>>>>> ef382191283ccdaca4fe596245dfa99cc8518e38

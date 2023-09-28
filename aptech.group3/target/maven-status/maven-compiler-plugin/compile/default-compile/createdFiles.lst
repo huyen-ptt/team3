@@ -8,10 +8,6 @@ khutro\aptech\group3\utils\AlertMessage.class
 khutro\aptech\group3\controller\DashboardController$1.class
 khutro\aptech\group3\model\RoomModel.class
 khutro\aptech\group3\dao\IRoomDao.class
-<<<<<<< HEAD
-=======
-khutro\aptech\group3\controller\ControllerFind.class
->>>>>>> ef382191283ccdaca4fe596245dfa99cc8518e38
 khutro\aptech\group3\utils\CustomListCell.class
 khutro\aptech\group3\dao\RoomDaoImpl.class
 khutro\aptech\group3\controller\HeaderController.class
