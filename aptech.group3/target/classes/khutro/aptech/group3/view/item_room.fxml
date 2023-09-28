@@ -7,11 +7,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<<<<<<< HEAD
 <AnchorPane id="AnchorPane" prefHeight="250.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khutro.aptech.group3.controller.ItemRoomController">
    <children>
       <Pane layoutY="59.0" prefHeight="250.0" prefWidth="1031.0">
          <children>
             <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="250.0" prefWidth="333.0">
+=======
+<AnchorPane id="AnchorPane" prefHeight="180.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khutro.aptech.group3.controller.ItemRoomController">
+   <children>
+      <Pane layoutY="59.0" prefHeight="244.0" prefWidth="1031.0">
+         <children>
+            <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="251.0" prefWidth="333.0">
+>>>>>>> ef382191283ccdaca4fe596245dfa99cc8518e38
                <children>
 <!--                  <ImageView fx:id="imageViewThumb" fitHeight="196.0" fitWidth="267.0" layoutX="36.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -20,7 +28,11 @@
                   </ImageView>-->
                </children>
             </Pane>
+<<<<<<< HEAD
             <Pane fx:id="tableViewRoom" layoutX="322.0" layoutY="-4.0" prefHeight="250.0" prefWidth="718.0">
+=======
+            <Pane fx:id="tableViewRoom" layoutX="322.0" layoutY="-4.0" prefHeight="251.0" prefWidth="718.0">
+>>>>>>> ef382191283ccdaca4fe596245dfa99cc8518e38
                <children>
 <!--                    <Text fx:id="textRoomArea" layoutX="28.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 20m2">
                      <font>

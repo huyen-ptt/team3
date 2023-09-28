@@ -43,29 +43,12 @@
                             <children>
                        
                                 <ListView fx:id="listViewRooms" layoutX="21.0" layoutY="66.0" prefHeight="986.0" prefWidth="980.0" />
+
                                 <Text layoutX="21.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="60.1044921875">
                                     <font>
                                         <Font name="System Italic" size="18.0" />
                                     </font>
                                 </Text>
-                                <!--Tìm kiếm-->
-<!--                                <AnchorPane layoutX="25.0" layoutY="-19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="600.0">
-                                    <children>
-                                        <Pane layoutX="-25.0" layoutY="14.0" prefHeight="79.0" prefWidth="1054.0">
-                                            <children>
-                                                <Text layoutX="21.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="60.1044921875">
-                                                    <font>
-                                                        <Font name="System Italic" size="18.0" />
-                                                    </font>
-                                                </Text>
-                                                <TextField fx:id="searchField" layoutX="81.0" layoutY="27.0" prefHeight="25.0" prefWidth="205.0" promptText="search" />
-                                                <Button layoutX="312.0" layoutY="27.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="80.0" text="search" />
-                                                <ListView fx:id="listView" layoutX="427.0" layoutY="5.0" prefHeight="47.0" prefWidth="599.0" />
-                                            </children>
-                                        </Pane>
-                                    </children>
-                                </AnchorPane>-->
-                                
                             </children>
                         </AnchorPane>
                         <!--footer-->

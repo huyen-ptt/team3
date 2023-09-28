@@ -43,6 +43,7 @@
                             <children>
                        
                                 <ListView fx:id="listViewRooms" layoutX="21.0" layoutY="66.0" prefHeight="986.0" prefWidth="980.0" />
+<<<<<<< HEAD
                                 <Text layoutX="21.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="60.1044921875">
                                     <font>
                                         <Font name="System Italic" size="18.0" />
@@ -50,6 +51,11 @@
                                 </Text>
                                 <!--Tìm kiếm-->
 <!--                                <AnchorPane layoutX="25.0" layoutY="-19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="600.0">
+=======
+
+                                <!--Tìm kiếm-->
+                                <AnchorPane layoutX="25.0" layoutY="-19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="600.0">
+>>>>>>> ef382191283ccdaca4fe596245dfa99cc8518e38
                                     <children>
                                         <Pane layoutX="-25.0" layoutY="14.0" prefHeight="79.0" prefWidth="1054.0">
                                             <children>
@@ -64,7 +70,11 @@
                                             </children>
                                         </Pane>
                                     </children>
+<<<<<<< HEAD
                                 </AnchorPane>-->
+=======
+                                </AnchorPane>
+>>>>>>> ef382191283ccdaca4fe596245dfa99cc8518e38
                                 
                             </children>
                         </AnchorPane>
