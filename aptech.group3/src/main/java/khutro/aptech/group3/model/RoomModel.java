@@ -34,6 +34,17 @@ public class RoomModel {
         this.roomImage = roomImage;
     }
 
+    public RoomModel(String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea) {
+        this.roomName = roomName;
+        this.roomDescription = roomDescription;
+        this.roomPrice = roomPrice;
+        this.roomOccupancy = roomOccupancy;
+        this.roomStatus = roomStatus;
+        this.roomType = roomType;
+        this.roomArea = roomArea;
+
+    }
+
     public RoomModel(int id, String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea, Timestamp createdAt) {
         this.id = id;
         this.roomName = roomName;
