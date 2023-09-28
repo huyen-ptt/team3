@@ -52,14 +52,14 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children> 
-                                                <Label prefHeight="18.0" prefWidth="32.0" text="image" GridPane.rowIndex="0" />
+                                                <!--<Label prefHeight="18.0" prefWidth="32.0" text="image" GridPane.rowIndex="0" />-->
                                                 <Label prefHeight="18.0" prefWidth="106.0" text="room_name" GridPane.rowIndex="2" />
                                                 <Label prefHeight="18.0" prefWidth="108.0" text="price" GridPane.rowIndex="4" />
                                                 <Label prefHeight="18.0" prefWidth="94.0" text="max_occupancy" GridPane.rowIndex="6" />
                                                 <Label prefHeight="18.0" prefWidth="46.0" text="status" GridPane.rowIndex="8" />
                                                 <Label prefHeight="18.0" prefWidth="78.0" text="room_area" GridPane.rowIndex="10" />
                                                 <Label prefHeight="18.0" prefWidth="32.0" text="type" GridPane.rowIndex="12" />
-                                                <TextField fx:id="imageTextField" GridPane.rowIndex="1" />
+                                                <!--<TextField fx:id="imageTextField" GridPane.rowIndex="1" />-->
                                                 <TextField fx:id="nameTextField" GridPane.rowIndex="3" />
                                                 <TextField fx:id="priceTextField" GridPane.rowIndex="5" />
                                                 <TextField fx:id="occupancyTextField" GridPane.rowIndex="7" />
@@ -114,7 +114,7 @@
                                             <content>
                                                 <TableView fx:id="tableViewRoom" prefHeight="571.0" prefWidth="978.0">
                                                     <columns>
-                                                        <TableColumn fx:id="imageColumn" prefWidth="100" text="Image" />
+                                                        <!--<TableColumn fx:id="imageColumn" prefWidth="100" text="Image" />-->
                                                         <TableColumn fx:id="roomIdColumn" prefWidth="78.39996415376663" text="ID" />
                                                         <TableColumn fx:id="nameColumn" prefWidth="111.20001220703125" text="room_name" />
                                                         <TableColumn fx:id="roomDescriptionColumn" prefWidth="200.0" text="room_description" />
