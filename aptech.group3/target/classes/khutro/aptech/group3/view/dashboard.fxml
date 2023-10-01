@@ -44,15 +44,14 @@
                        
                                 <ListView fx:id="listViewRooms" layoutY="78.0" prefHeight="1005.0" prefWidth="980.0" />
 
-<<<<<<< HEAD
                                 <Text layoutX="21.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="60.1044921875">
                                     <font>
                                         <Font name="System Italic" size="18.0" />
                                     </font>
                                 </Text>
-=======
+
                                 <!--                       Tìm kiếm-->
-                                <AnchorPane layoutX="25.0" layoutY="-19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="600.0">
+<!--                                <AnchorPane layoutX="25.0" layoutY="-19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="600.0">
                                     <children>
                                         <Pane layoutX="-25.0" layoutY="14.0" prefHeight="79.0" prefWidth="1054.0">
                                             <children>
@@ -67,7 +66,7 @@
                                             </children>
                                         </Pane>
                                     </children>
-                                </AnchorPane>
+                                </AnchorPane>-->
                         <AnchorPane id="AnchorPane" layoutX="-6.0" layoutY="98.0" prefHeight="257.0" prefWidth="1031.0">
                            <children>
                               <Pane layoutY="59.0" prefHeight="244.0" prefWidth="1031.0">
@@ -105,7 +104,6 @@
                               </Pane>
                            </children>
                         </AnchorPane>
->>>>>>> 066dbc27cfcc38c435d9ff6c630da22e72d63c3a
                             </children>
                         </AnchorPane>
                         <AnchorPane layoutY="1439.0" prefHeight="260.0" prefWidth="1024.0" style="-fx-background-color: A0C49D;">

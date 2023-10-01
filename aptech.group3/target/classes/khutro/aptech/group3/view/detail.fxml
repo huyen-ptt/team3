@@ -10,15 +10,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane fx:controller="khutro.aptech.group3.controller.DetailController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <content>
         <AnchorPane prefHeight="778.0" prefWidth="1031.0">
             <children>
+                <!--header-->
                 <fx:include source="header.fxml" />
+                <!--thân-->
                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="1022.0" layoutY="80.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+       <!--ảnh phòng-->
       <Pane layoutY="-1.0" prefHeight="465.0" prefWidth="425.0">
          <children>
+             
             <ImageView fitHeight="294.0" fitWidth="377.0" layoutX="24.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="file:/D:/team3/aptech.group3/src/main/resources/khutro/aptech/group3/image/10.jpg" />
@@ -39,41 +43,45 @@
                   <Image url="file:/D:/team3/aptech.group3/src/main/resources/khutro/aptech/group3/image/8.jpg" />
                </image>
             </ImageView>
+            
          </children>
       </Pane>
+      <!--dữ liệu phòng-->
+       <!--<ListView fx:id="listRoomDetail" layoutY="78.0" prefHeight="1005.0" prefWidth="980.0" />-->
+
       <Pane layoutX="425.0" layoutY="-3.0" prefHeight="471.0" prefWidth="600.0">
          <children>
-            <Text layoutX="40.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room name: 201" wrappingWidth="153.0">
+            <Text fx:id="textNameDetail" layoutX="40.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room name: 201" wrappingWidth="153.0">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text layoutX="41.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 20m2">
+            <Text fx:id="textAreaDetail" layoutX="41.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 20m2">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
-            <Text layoutX="43.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: 2 millon VND">
+            <Text fx:id="textPriceDetail" layoutX="43.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: 2 millon VND">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
-            <Text layoutX="40.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room desciption: air conditioner, water heater, bed. There is a private bathroom." wrappingWidth="545.603515625">
+            <Text fx:id="textDesciptionDetail" layoutX="40.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room desciption: air conditioner, water heater, bed. There is a private bathroom." wrappingWidth="545.603515625">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
-            <Text layoutX="43.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: full ">
+            <Text fx:id="textStatusDetail" layoutX="43.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: full ">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
-            <Text layoutX="44.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type: double room">
+            <Text fx:id="textTypeDetail" layoutX="44.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type: double room">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
-            <Text layoutX="41.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max occupancy: 2 people">
+            <Text fx:id="textOccupancyDetail" layoutX="41.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max occupancy: 2 people">
                <font>
                   <Font size="15.0" />
                </font>
@@ -85,8 +93,12 @@
             </Button>
          </children>
       </Pane>
+      
    </children>
 </AnchorPane>
+
+<!--footer-->
+
 <AnchorPane prefHeight="260.0" prefWidth="1024.0" layoutX="-5.0" layoutY="550.0" style="-fx-background-color: A0C49D;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text layoutX="754.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIÊN HỆ">

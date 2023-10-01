@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="244.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khutro.aptech.group3.controller.ItemRoomController">
    <children>
-      <Pane layoutY="59.0" prefHeight="244.0" prefWidth="1031.0">
+      <Pane onMouseClicked="#nextDetail" layoutY="59.0" prefHeight="244.0" prefWidth="1031.0">
          <children>
             <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="251.0" prefWidth="333.0">
                <children>
@@ -18,9 +18,10 @@
                         <Image url="@../image/2.jpg" />
                      </image>
                   </ImageView>
+
                </children>
             </Pane>
-            <Pane fx:id="tableViewRoom" layoutX="322.0" layoutY="-4.0" prefHeight="251.0" prefWidth="718.0">
+            <Pane layoutX="322.0" layoutY="-4.0" prefHeight="251.0" prefWidth="718.0">
                <children>
 <!--                      <Text fx:id="textRoomArea" layoutX="28.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room area: 22m2">
                      <font>

@@ -28,8 +28,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import khutro.aptech.group3.database.ConnectionProvider;
 import khutro.aptech.group3.model.RoomModel;
 import khutro.aptech.group3.dao.RoomDaoImpl;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 /**
  *
@@ -39,12 +37,6 @@ public class AddRoomController implements Initializable {
 
     ConnectionProvider connection = new ConnectionProvider();
     RoomDaoImpl roomDao = new RoomDaoImpl(connection.getConnection());
-
-    @FXML
-    private TextField imageTextField;
-
-    @FXML
-    private ImageView imageView;
 
     @FXML
     private TextField nameTextField, priceTextField, occupancyTextField, statusTextField, areaTextField, typeTextField;
@@ -114,23 +106,6 @@ public class AddRoomController implements Initializable {
 
         tableViewRoom.setContextMenu(contextMenu);
 
-        // Xử lý khi người dùng nhập đường dẫn hình ảnh vào imageTextField
-        imageTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null && !newValue.isEmpty()) {
-                try {
-                    // Tạo một đối tượng Image từ đường dẫn mới
-                    Image image = new Image("file:" + newValue); // Ở đây, giả định đường dẫn là đường dẫn đến tệp hình ảnh trên đĩa cục bộ
-                    imageView.setImage(image);
-                } catch (Exception e) {
-                    // Xử lý nếu có lỗi khi tải hình ảnh
-                    imageView.setImage(null); // Xóa hình ảnh nếu có lỗi
-                    System.err.println("Lỗi khi tải hình ảnh: " + e.getMessage());
-                }
-            } else {
-                // Nếu người dùng xóa đường dẫn, xóa hình ảnh
-                imageView.setImage(null);
-            }
-        });
     }
 
     public void refreshTable() {
@@ -148,10 +123,9 @@ public class AddRoomController implements Initializable {
         String area = areaTextField.getText().trim();
         String type = typeTextField.getText().trim();
         String description = descriptionTextArea.getText().trim();
-         String image = imageTextField.getText().trim(); // Lấy đường dẫn hình ảnh từ TextField
 
         // Tạo đối tượng RoomModel từ các giá trị đã hứng
-        RoomModel roomModel = new RoomModel(image,name, description, Double.valueOf(price), Integer.parseInt(occupancy), Boolean.parseBoolean(status), type, Double.valueOf(area));
+        RoomModel roomModel = new RoomModel(name, description, Double.valueOf(price), Integer.parseInt(occupancy), Boolean.parseBoolean(status), type, Double.valueOf(area));
 
         boolean isSuccess = roomDao.insertRoom(roomModel);
         if (isSuccess) {
@@ -171,40 +145,36 @@ public class AddRoomController implements Initializable {
         areaTextField.clear();
         typeTextField.clear();
         descriptionTextArea.clear();
-        imageTextField.clear(); // Xóa cả đường dẫn hình ảnh khi clearFields
-        imageView.setImage(null); 
     }
     // chức năng tìm kiếm
     @FXML
     private TextField searchTextField;
-//    @FXML
-//    private TableView<RoomModel> roomTableView;
     
-    // Define your TableColumn variables...
-
-    // Other methods...
-
+    // khi click button có action handleSearch, diễn ra sự kiện
     @FXML
     private void handleSearch() {
+        //truy xuất văn bản đã nhập vào searchTextField và cắt bớt mọi khoảng trắng ở đầu hoặc cuối
         String searchTerm = searchTextField.getText().trim();
         
 
         // Connect to the database
         try {
-//            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/khutro", "username", "password");
+            // kết nối data
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/khutro", "root", "");
-            // Prepare and execute the search query
-            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM room WHERE room_name LIKE ?");
+            // tìm kiếm các bản ghi trong bảng phòng trong đó trường id giống cụm từ tìm kiếm
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM room WHERE id LIKE ?");
             stmt.setString(1, "%" + searchTerm + "%");
 
             ResultSet rs = stmt.executeQuery();
 
-            // Populate the TableView with the results
+            //tạo ra một ObservableList để lưu trữ các đối tượng RoomModel. Sau đó,
+            // nó lặp qua ResultSet và tạo đối tượng RoomModel cho mỗi kết quả, thêm nó vào danh sách
             
             ObservableList<RoomModel> roomList = FXCollections.observableArrayList();
             while (rs.next()) {
-                // Create Room objects from the ResultSet and add them to roomList
-                int id = rs.getInt("id");
+                //Trích xuất chi tiết phòng từ tập kết quả và tạo đối tượng RoomModel
+                // Thêm đối tượng RoomModel vào danh sách
+            int id = rs.getInt("id");
             String roomName = rs.getString("room_name");
             String roomDescription = rs.getString("room_description");
             Double roomPrice = rs.getDouble("price");
@@ -217,9 +187,9 @@ public class AddRoomController implements Initializable {
             RoomModel room = new RoomModel(roomName, roomDescription, roomPrice, id, roomStatus, roomType, roomArea);
             roomList.add(room);
             }
-            System.out.println("here");
+//            System.out.println("here");
             System.out.println(roomList.toString());
-            // Set the TableView items
+            //đặt các mục trong thành phần TableView thành danh sách các đối tượng RoomModel được truy xuất từ cơ sở dữ liệu
             tableViewRoom.setItems(roomList);
              tableViewRoom.refresh();
             // Close the connections

@@ -1,14 +1,32 @@
-<<<<<<< HEAD
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package khutro.aptech.group3.controller;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 //import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import khutro.aptech.group3.App;
 import khutro.aptech.group3.model.RoomModel;
 
 /**
@@ -22,55 +40,37 @@ public class ItemRoomController {
     
     @FXML
     private Text textRoomName, textRoomStatus, textRoomDescription, textRoomPrice, textRoomArea;
-    //    private Text textRoomName, textRoomDescription, textRoomPrice, textRoomArea, textRoomOccupancy;
-//    private Image image;
 
     public void setData(RoomModel roomModel) {
-//        imageViewThumb.setImage(""+roomModel.getroomImage());
-//        imageViewThumb.setImage(""+roomModel.getroomImage());
-//    Image roomImage = new Image(roomModel.getroomImage()); // Assuming getroomImage() returns a valid image URL or path
-//    imageViewThumb.setImage(roomImage);
+
         textRoomName.setText("Room name: "+roomModel.getRoomName());
-//        textRoomStatus.setText(""+roomModel.isRoomStatus());
         textRoomDescription.setText("Room description: "+roomModel.getRoomDescription());
         textRoomPrice.setText("Room price: "+roomModel.getRoomPrice());
         textRoomArea.setText("Room area: "+roomModel.getRoomArea());
     
     }
-    
-}
-=======
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package khutro.aptech.group3.controller;
-
-import javafx.fxml.FXML;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
-import khutro.aptech.group3.model.RoomModel;
-
-/**
- *
- * @author CLD
- */
-public class ItemRoomController {
-
+    // khi cilck tên nhảy sang trang mới
     @FXML
-    private ImageView imageViewThumb; // Chưa xử lý
-    @FXML
-        private Text textRoomName, textRoomDescription, textRoomPrice, textRoomArea;
-//    private Image image;
+    public void nextDetail() throws IOException {
+//        App.setRoot("detail");
+    // Lấy id phòng đã click
+    String roomId = textRoomName.getText().replace("Room name: ", "");
 
-    public void setData(RoomModel roomModel) {
-//        imageViewThumb.setImage(image);
-        textRoomName.setText("Room name: "+roomModel.getRoomName());
-        textRoomDescription.setText("Room description: "+roomModel.getRoomDescription());
-        textRoomPrice.setText("room price: "+roomModel.getRoomPrice());
-        textRoomArea.setText("Room area: "+roomModel.getRoomArea());
-    }
+    // Tải trang chi tiết FXML
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/khutro/aptech/group3/view/detail.fxml"));
+    Parent detailPage = loader.load();
 
+    // Nhận bộ điều khiển cho trang chi tiết
+    DetailController detailController = loader.getController();
+
+    // Chuyển id phòng cho bộ điều khiển chi tiết
+    detailController.setRoomId(Integer.parseInt(roomId));
+
+    // Hiển thị trang chi tiết
+    Stage stage = new Stage();
+    stage.setScene(new Scene(detailPage));
+    stage.show();
 }
->>>>>>> 066dbc27cfcc38c435d9ff6c630da22e72d63c3a
+        
+}
+
