@@ -1,28 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+///*
+// * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+// * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+// */
 package khutro.aptech.group3.controller;
-
+//
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import khutro.aptech.group3.App;
 import khutro.aptech.group3.dao.RoomDaoImpl;
 import khutro.aptech.group3.database.ConnectionProvider;
 import khutro.aptech.group3.model.RoomModel;
 import khutro.aptech.group3.utils.CustomListCell;
-
-/**
- *
- * @author CLD
- */
+//
+///**
+// *
+// * @author CLD
+// */
 public class DashboardController implements Initializable {
 
     ConnectionProvider connection = new ConnectionProvider();
@@ -61,5 +69,4 @@ public class DashboardController implements Initializable {
     public void handelswitchDetail() throws IOException {
         App.setRoot("detail");
     }
-
 }

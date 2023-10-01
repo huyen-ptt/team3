@@ -21,8 +21,10 @@ public class RoomModel {
     private String roomType;
     private Double roomArea;
     private Timestamp createdAt; // Add this field
+    private String roomImage;
 
-    public RoomModel(String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea) {
+    public RoomModel(String roomImage, String roomName, Double roomPrice, int id, int roomOccupancy, Boolean status, String roomDescription, Double roomArea, Timestamp createdAt1) {
+        this.id = id;
         this.roomName = roomName;
         this.roomDescription = roomDescription;
         this.roomPrice = roomPrice;
@@ -30,9 +32,10 @@ public class RoomModel {
         this.roomStatus = roomStatus;
         this.roomType = roomType;
         this.roomArea = roomArea;
+        this.roomImage = roomImage;
     }
 
-    public RoomModel(int id, String roomName, String roomDescription, Double roomPrice, int roomOccupancy, boolean roomStatus, String roomType, Double roomArea, Timestamp createdAt) {
+    public RoomModel(String roomImage, String roomName, Double roomPrice, int id, Boolean status, String roomDescription, Double roomArea) {
         this.id = id;
         this.roomName = roomName;
         this.roomDescription = roomDescription;
@@ -42,10 +45,13 @@ public class RoomModel {
         this.roomType = roomType;
         this.roomArea = roomArea;
         this.createdAt = createdAt;
+        this.roomImage = roomImage;
     }
 
+    public RoomModel(int i, String no_rooms_found) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
-
     public int getId() {
         return id;
     }
@@ -86,7 +92,7 @@ public class RoomModel {
         this.roomOccupancy = roomOccupancy;
     }
 
-    public boolean isRoomStatus() {
+    public boolean getRoomStatus() {
         return roomStatus;
     }
 
@@ -110,7 +116,14 @@ public class RoomModel {
         this.roomArea = roomArea;
     }
     
-
+//    public void getroomImage(String roomImage){
+//        this.roomImage = roomImage;
+//    }
+//    
+//    public void setroomImage(String roomImage) {
+//        this.roomImage = roomImage;
+//    }
+    
     public Timestamp getCreatedAt() {
         return createdAt;
     }
@@ -124,8 +137,14 @@ public class RoomModel {
         return "RoomModel{" + "id=" + id + ", roomName=" + roomName + ", roomDescription=" + roomDescription + ", roomPrice=" + roomPrice + ", roomOccupancy=" + roomOccupancy + ", roomStatus=" + roomStatus + ", roomType=" + roomType + ", createdAt=" + createdAt + '}';
     }
 
+<<<<<<< HEAD
     
 
     
 
+=======
+    public String getroomImage() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+>>>>>>> 31dbef31333c37b0f01dec24b56d41a54a2d5527
 }

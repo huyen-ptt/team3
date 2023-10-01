@@ -5,12 +5,19 @@
 package khutro.aptech.group3.controller;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
@@ -154,8 +161,85 @@ public class AddRoomController implements Initializable {
         typeTextField.clear();
         descriptionTextArea.clear();
     }
+<<<<<<< HEAD
     
     //UPDATE
     
 
 }
+=======
+    // chức năng tìm kiếm
+    @FXML
+    private TextField searchTextField;
+    
+    // khi click button có action handleSearch, diễn ra sự kiện
+    @FXML
+    private void handleSearch() {
+        //truy xuất văn bản đã nhập vào searchTextField và cắt bớt mọi khoảng trắng ở đầu hoặc cuối
+        String searchTerm = searchTextField.getText().trim();
+        
+
+        // Connect to the database
+        try {
+            // kết nối data
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/khutro", "root", "");
+            // tìm kiếm các bản ghi trong bảng phòng trong đó trường id giống cụm từ tìm kiếm
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM room WHERE id LIKE ?");
+            stmt.setString(1, "%" + searchTerm + "%");
+
+            ResultSet rs = stmt.executeQuery();
+
+            //tạo ra một ObservableList để lưu trữ các đối tượng RoomModel. Sau đó,
+            // nó lặp qua ResultSet và tạo đối tượng RoomModel cho mỗi kết quả, thêm nó vào danh sách
+            
+            ObservableList<RoomModel> roomList = FXCollections.observableArrayList();
+            while (rs.next()) {
+                //Trích xuất chi tiết phòng từ tập kết quả và tạo đối tượng RoomModel
+                // Thêm đối tượng RoomModel vào danh sách
+            int id = rs.getInt("id");
+            String roomName = rs.getString("room_name");
+            String roomDescription = rs.getString("room_description");
+            Double roomPrice = rs.getDouble("price");
+            int roomOccupancy = rs.getInt("max_occupancy");
+            boolean roomStatus = rs.getBoolean("status");
+            String roomType = rs.getString("type");
+            Double roomArea = rs.getDouble("room_area");
+//            Timestamp createdAt = rs.getTimestamp("created_at");
+
+            RoomModel room = new RoomModel(roomName, roomDescription, roomPrice, id, roomStatus, roomType, roomArea);
+            roomList.add(room);
+            }
+//            System.out.println("here");
+            System.out.println(roomList.toString());
+            //đặt các mục trong thành phần TableView thành danh sách các đối tượng RoomModel được truy xuất từ cơ sở dữ liệu
+            tableViewRoom.setItems(roomList);
+             tableViewRoom.refresh();
+            // Close the connections
+            rs.close();
+            stmt.close();
+            conn.close();
+
+            // Handle case where no results are found
+            if (roomList.isEmpty()) {
+            // Room not found, display a message
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Room Not Found");
+            alert.setHeaderText(null);
+            alert.setContentText("The room with ID " + searchTerm + " does not exist.");
+            alert.showAndWait();
+        }
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } catch (NumberFormatException e) {
+        // Handle the case where searchTerm is not a valid number
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Invalid Input");
+        alert.setHeaderText(null);
+        alert.setContentText("Please enter a valid room ID.");
+        alert.showAndWait();
+    }
+    }
+    
+}
+>>>>>>> 31dbef31333c37b0f01dec24b56d41a54a2d5527

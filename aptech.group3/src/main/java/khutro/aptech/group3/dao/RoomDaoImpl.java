@@ -42,7 +42,7 @@ public class RoomDaoImpl implements IRoomDao {
                     String type = resultSet.getString("type");
                     Timestamp created_time = resultSet.getTimestamp("created_time");
 
-                    RoomModel roomModel = new RoomModel(id, room_name, room_description, price, max_occupancy, status, type, room_area, created_time);
+                    RoomModel roomModel = new RoomModel(room_name, room_description, price, id, status, type, room_area);
                     rooms.add(roomModel);
                 }
             } catch (SQLException e) {
@@ -60,7 +60,7 @@ public class RoomDaoImpl implements IRoomDao {
             preparedStatement.setString(2, roomModel.getRoomDescription());
             preparedStatement.setDouble(3, roomModel.getRoomPrice());
             preparedStatement.setInt(4, roomModel.getRoomOccupancy());
-            preparedStatement.setBoolean(5, roomModel.isRoomStatus());
+            preparedStatement.setBoolean(5, roomModel.getRoomStatus());
             preparedStatement.setDouble(6, roomModel.getRoomArea());
             preparedStatement.setString(7, roomModel.getRoomType());
 
