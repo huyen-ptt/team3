@@ -156,34 +156,6 @@ public class AddRoomController implements Initializable {
     }
     
     //UPDATE
-    @FXML
-    public void roomUpdate() {
-        // Retrieve the selected item from the table
-        RoomModel selectedItem = tableViewRoom.getSelectionModel().getSelectedItem();
-
-        if (selectedItem != null) {
-            // Get the current values from the selected item
-            String currentName = selectedItem.getRoomName();
-            String currentPrice = String.valueOf(selectedItem.getRoomPrice());
-            String currentOccupancy = String.valueOf(selectedItem.getRoomOccupancy());
-            String currentStatus = String.valueOf(selectedItem.isRoomStatus());
-            String currentArea = String.valueOf(selectedItem.getRoomArea());
-            String currentType = selectedItem.getRoomType();
-            String currentDescription = selectedItem.getRoomDescription();
-
-            // Populate the input fields with the current values
-            nameTextField.setText(currentName);
-            priceTextField.setText(currentPrice);
-            occupancyTextField.setText(currentOccupancy);
-            statusTextField.setText(currentStatus);
-            areaTextField.setText(currentArea);
-            typeTextField.setText(currentType);
-            descriptionTextArea.setText(currentDescription);
-
-            // You can also update the UI or perform other actions as needed
-        } else {
-            showAlert("Error", "Please select a room to update.");
-        }
-    }
+    
 
 }
