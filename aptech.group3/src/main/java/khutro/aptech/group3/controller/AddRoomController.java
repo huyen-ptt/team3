@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -30,6 +31,7 @@ import khutro.aptech.group3.model.RoomModel;
 import khutro.aptech.group3.dao.RoomDaoImpl;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.MouseEvent;
 
 
 /**
@@ -84,7 +86,7 @@ public class AddRoomController implements Initializable {
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("roomStatus"));
         roomAreaColumn.setCellValueFactory(new PropertyValueFactory<>("roomArea"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("roomType"));
-
+        
         refreshTable();
 
         tableViewRoom.setOnMouseClicked(event -> {
@@ -164,9 +166,39 @@ public class AddRoomController implements Initializable {
 <<<<<<< HEAD
     
     //UPDATE
+    @FXML 
+    void updateBtn(ActionEvent event){
+        ObservableList<RoomModel> currentTableData = tableViewRoom.getItems();
+        int currentRoom = Integer.parseInt(roomIdColumn.getText());
+        
+        for(RoomModel room : currentTableData){
+            if(room.getId() == currentRoom){
+                room.setName(nameTextField.getText());
+                room.setDescription(descriptionTextArea.getText());
+                room.setPrice(priceTextField.getText());
+                room.setMaxOccupancy(occupancyTextField.getText());
+                room.setStatus(statusTextField.getText());
+                room.setArea(areaTextField.getText());
+                room.setType(typeTextField.getText());
+  
+                tableViewRoom.setItems(currentTableData);
+                tableViewRoom.refresh();
+                break;
+            }
+        }
+    }
     
-
-}
+    @FXML
+    void rowClicked(MouseEvent event){
+        RoomModel clickedRoom = tableViewRoom.getSelectionModel().getSelectedItems();
+        nameTextField.setText(String.valueOf(clickedRoom.getId()));
+        descriptionTextArea.setText(String.valueOf(clickedRoom.getDescription()));
+        priceTextField.setText(String.valueOf(clickedRoom.getPrice()));
+        occupancyTextField.setText(String.valueOf(clickedRoom.getMaxOccupancy()));
+        statusTextField.setText(String.valueOf(clickedRoom.getStatus()));
+        areaTextField.setText(String.valueOf(clickedRoom.getArea()));
+        typeTextField.setText(String.valueOf(clickedRoom.getType()));
+    }
 =======
     // chức năng tìm kiếm
     @FXML
