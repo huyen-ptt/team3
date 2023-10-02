@@ -34,6 +34,9 @@ import java.sql.Connection;
 import khutro.aptech.group3.App;
 import khutro.aptech.group3.utils.AlertMessage;
 
+import java.security.MessageDigest;
+import java.nio.charset.StandardCharsets;
+
 public class LoginRegisterController implements Initializable {
 
     @FXML
@@ -109,7 +112,7 @@ public class LoginRegisterController implements Initializable {
         if (login_username.getText().isEmpty() || login_password.getText().isEmpty()) {
             alert.errorMessage("Incorrect username or password");
         } else {
-            String selectData = "SELECT * FROM user WHERE " + "username = ? and password = ?";
+            String selectData = "SELECT * FROM user WHERE " + "username = ?";
 
             connect = connectDB();
 
@@ -122,27 +125,50 @@ public class LoginRegisterController implements Initializable {
             try {
                 prepare = connect.prepareStatement(selectData);
                 prepare.setString(1, login_username.getText());
-                prepare.setString(2, login_password.getText());
 
                 result = prepare.executeQuery();
 
-                //ALL DATA CORRECT -> GO TO DASHBOARD FORM
+                // Check if the user with the given username exists
                 if (result.next()) {
-//                    alert.successMessage("You've signed up");
+                    // Get the stored hashed password from the database
+                    String storedHashedPassword = result.getString("password");
 
-                    App.setRoot("dashboard");
-                    //HIDE WINDOW OF LOGIN FORM
-//                    login_btn.getScene().getWindow().hide();
+                    // Hash the entered password
+                    String enteredPassword = login_password.getText();
+                    String hashedPassword = MD5Hash(enteredPassword);
 
-                    //ERROR MESSAGE WILL APPEAR
+                    // Compare the hashed passwords
+                    if (storedHashedPassword.equals(hashedPassword)) {
+                        App.setRoot("dashboard");
+                        // HIDE WINDOW OF LOGIN FORM (if needed)
+                        // login_btn.getScene().getWindow().hide();
+                    } else {
+                        alert.errorMessage("Incorrect username or password");
+                    }
                 } else {
                     alert.errorMessage("Incorrect username or password");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
+    }
+
+    public static String MD5Hash(String input) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] hashInBytes = md.digest(input.getBytes(StandardCharsets.UTF_8));
+
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashInBytes) {
+                sb.append(String.format("%02x", b));
+            }
+
+            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     //SHOW PASSWORD
